@@ -1,7 +1,7 @@
 
 import './cv.css';
-import Content from "./components/content/content";
-import Sidebar from "./components/sidebar/sidebar";
+import Content from "./components/content/Content";
+import Sidebar from "./components/sidebar/Sidebar";
 
 function App() {
   return (
