@@ -1,3 +1,5 @@
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 function Title() {
     return <div className="title">
@@ -17,8 +19,14 @@ function ContentList(title , items) {
     const listItems = items.map((i) =>
         <div>
             <div>{i.time}</div>
-            <div>{i.title}</div>
-            <div>{i.description}</div>
+            <div className="timeLine">
+                <div>{i.title}</div>
+                <div>{i.description}</div>
+            </div>
+            <div>
+                <FontAwesomeIcon icon={faLocationDot}/>
+                {i.location}
+            </div>
         </div>
     );
     return (
@@ -31,9 +39,10 @@ function ContentList(title , items) {
 
 function Content() {
     const education = [
-        {time:"Now", title:"MSc BA New Business", description:"Chur"},
-        {time:"Now", title:"MSc BA New Business", description:"Chur"},
-        {time:"Now", title:"MSc BA New Business", description:"Chur"}
+        {time:"Now", title:"MSc BA New Business", description:"Chur", location: "Chur"},
+        {time:"Now", title:"MSc BA New Business", description:"Chur", location: "Chur"},
+        {time:"Now", title:"MSc BA New Business", description:"Chur", location: "Chur"},
+        {time:"Now", title:"MSc BA New Business", description:"Chur", location: "Chur"},
     ]
 
     return (

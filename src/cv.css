@@ -49,9 +49,40 @@ h3 {
     text-transform: uppercase;
 }
 
-.content-list div div {
+.content {
+    margin-left: 0.5cm;
+}
+
+.content-list > div > div {
     display: flex;
     flex-direction: row;
+}
+
+.timeLine {
+    border-left: 1px solid lightgray;
+    padding-left: 0.5cm;
+    margin-left: 0.5cm;
+    margin-right: 0.5cm;
+    padding-bottom: 0.3cm;
+    width: 7cm;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.timeLine::before {
+    content: "";
+    width: 0.1cm;
+    height: 0.1cm;
+    background-color: gray;
+    border-radius: 999px;
+    border: 3px solid gray;
+    position: absolute;
+    left: 15.05cm;
+}
+
+.timeLine > div:first-child {
+    font-weight: bold;
 }
 
 img {
