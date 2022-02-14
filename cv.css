@@ -1,0 +1,34 @@
+.page {
+    width: 21cm;
+    min-height: 29.7cm;
+    padding: 0;
+    margin: 1cm auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    width: 6cm;
+    min-height: 29.7cm;
+    background-color: #6f6f6f;
+}
+
+h1 {
+    font-family: helvetica, serif;
+    text-transform: capitalize;
+}
+
+h2 {
+    font-family: helvetica, serif;
+    text-transform: capitalize;
+}
+
+h3 {
+    font-family: helvetica, serif;
+    text-transform: capitalize;
+}
