@@ -14,79 +14,36 @@ function About() {
     </div>;
 }
 
-function Education() {
-    return <div className="education">
-        <h3>Education</h3>
-        <table>
-            <tbody>
-            <tr>
-                <td>Now</td>
-                <td>MSc BA New Business</td>
-                <td>Chur</td>
-            </tr>
-            <tr>
-                <td>Sep 18</td>
-                <td>BSc FHO in Compuer Science</td>
-                <td>Rapperswil</td>
-            </tr>
-            <tr>
-                <td>Aug 14</td>
-                <td>Informatiker Systemtechnik EFZ</td>
-                <td>Uster/Wetzikon</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>;
-}
-
-function Timeline() {
-    return <div className="timeline">
-        <h3>Timeline</h3>
-        <table>
-            <tbody>
-            <tr>
-                <td>Now</td>
-                <td>MSc BA New Business</td>
-                <td>Chur</td>
-            </tr>
-            <tr>
-                <td>Sep 18</td>
-                <td>BSc FHO in Compuer Science</td>
-                <td>Rapperswil</td>
-            </tr>
-            <tr>
-                <td>Aug 14</td>
-                <td>Informatiker Systemtechnik EFZ</td>
-                <td>Uster/Wetzikon</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>;
-}
-
-function Projects() {
-    return <div className="projects">
-        <h3>Projects</h3>
-        <table>
-            <tbody>
-            <tr>
-                <td>Now</td>
-                <td>MSc BA New Business</td>
-                <td>Chur</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>;
+function ContentList(title , items) {
+    const listItems = items.map((i) =>
+        <div>
+            <div>{i.time}</div>
+            <div>{i.title}</div>
+            <div>{i.description}</div>
+        </div>
+    );
+    return (
+        <div className="content-list">
+            <h3>{title}</h3>
+            <div>{listItems}</div>
+        </div>
+    );
 }
 
 function Content() {
+    const education = [
+        {time:"Now", title:"MSc BA New Business", description:"Chur"},
+        {time:"Now", title:"MSc BA New Business", description:"Chur"},
+        {time:"Now", title:"MSc BA New Business", description:"Chur"}
+    ]
+
     return (
         <div className="content">
             {Title()}
             {About()}
-            {Education()}
-            {Timeline()}
-            {Projects()}
+            {ContentList("Education", education)}
+            {ContentList("Timeline", education)}
+            {ContentList("Projects", education)}
         </div>
     );
 }

@@ -13,22 +13,38 @@
 }
 
 .sidebar {
-    width: 6cm;
+    width: 8cm;
     min-height: 29.7cm;
     background-color: #6f6f6f;
+    color: white;
+    font-family: "JetBrains Mono";
 }
 
 h1 {
     font-family: helvetica, serif;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 h2 {
     font-family: helvetica, serif;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 h3 {
     font-family: helvetica, serif;
-    text-transform: capitalize;
+    text-transform: uppercase;
+}
+
+.content-list div div {
+    display: flex;
+    flex-direction: row;
+}
+
+img {
+    border-radius: 50%;
+    width: 5cm;
+    height: 5cm;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
