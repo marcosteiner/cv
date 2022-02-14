@@ -12,6 +12,39 @@
     flex-direction: row;
 }
 
+h1 {
+    ffont-family: "Roboto", helvetica, serif;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    font-family: "Roboto", helvetica, serif;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0 0 0.5cm;
+}
+
+h3 {
+    font-family: "Roboto", helvetica, serif;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0.5cm 0 0.2cm;
+}
+
+h4 {
+    font-family: helvetica, serif;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
 .sidebar {
     width: 8cm;
     min-height: 29.7cm;
@@ -33,22 +66,6 @@
     margin-right: 0.5cm;
 }
 
-
-h1 {
-    font-family: helvetica, serif;
-    text-transform: uppercase;
-}
-
-h2 {
-    font-family: helvetica, serif;
-    text-transform: uppercase;
-}
-
-h3 {
-    font-family: helvetica, serif;
-    text-transform: uppercase;
-}
-
 .content {
     margin-left: 0.5cm;
 }
@@ -56,6 +73,10 @@ h3 {
 .content-list > div > div {
     display: flex;
     flex-direction: row;
+}
+
+.content-list svg {
+    margin-right: 0.2cm;
 }
 
 .timeLine {

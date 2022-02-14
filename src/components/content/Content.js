@@ -4,14 +4,14 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 function Title() {
     return <div className="title">
         <h1>Marco Steiner</h1>
-        <h3>Software Engineer</h3>
+        <h4>Software Engineer</h4>
     </div>;
 }
 
 function About() {
     return <div className="about">
         <h3>About</h3>
-        Just a very curios engineer interested in finding out how the world works and wanting to be useful.
+        <p>Just a very curios engineer interested in finding out how the world works and wanting to be useful.</p>
     </div>;
 }
 
