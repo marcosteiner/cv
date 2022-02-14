@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="./cv.css">
-</head>
-<body>
-    <div class="page">
-        <div class="sidebar">
+
+function Sidebar() {
+    return (
+        <div className="sidebar">
             <h3>contact info</h3>
             <table>
                 <tbody>
@@ -105,79 +99,7 @@
             </table>
 
         </div>
+    );
+}
 
-
-
-        <div class="main">
-            <div class="title">
-                <h1>Marco Steiner</h1>
-                <h3>Software Engineer</h3>
-            </div>
-
-            <div class="about">
-                <h3>About</h3>
-                Just a very curios engineer interested in finding out how the world works and wanting to be useful.
-            </div>
-
-            <div class="education">
-                <h3>Education</h3>
-                <table>
-                    <tbody>
-                    <tr>
-                        <td>Now</td>
-                        <td>MSc BA New Business</td>
-                        <td>Chur</td>
-                    </tr>
-                    <tr>
-                        <td>Sep 18</td>
-                        <td>BSc FHO in Compuer Science</td>
-                        <td>Rapperswil</td>
-                    </tr>
-                    <tr>
-                        <td>Aug 14</td>
-                        <td>Informatiker Systemtechnik EFZ</td>
-                        <td>Uster/Wetzikon</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="timeline">
-                <h3>Timeline</h3>
-                <table>
-                    <tbody>
-                    <tr>
-                        <td>Now</td>
-                        <td>MSc BA New Business</td>
-                        <td>Chur</td>
-                    </tr>
-                    <tr>
-                        <td>Sep 18</td>
-                        <td>BSc FHO in Compuer Science</td>
-                        <td>Rapperswil</td>
-                    </tr>
-                    <tr>
-                        <td>Aug 14</td>
-                        <td>Informatiker Systemtechnik EFZ</td>
-                        <td>Uster/Wetzikon</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="projects">
-                <h3>Projects</h3>
-                <table>
-                    <tbody>
-                    <tr>
-                        <td>Now</td>
-                        <td>MSc BA New Business</td>
-                        <td>Chur</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+export default Sidebar;
