@@ -1,7 +1,10 @@
+import photo from './photo.jpg';
 
 function Sidebar() {
     return (
         <div className="sidebar">
+             <img src={photo}/>
+
             <h3>contact info</h3>
             <table>
                 <tbody>
