@@ -1,4 +1,3 @@
-import logo from "../../logo.svg";
 
 function Title() {
     return <div className="title">
