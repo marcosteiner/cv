@@ -1,106 +1,87 @@
 import photo from './photo.jpg';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {
+    faGithub,
+    faReact,
+    faJava,
+    faPython,
+    faLinux,
+    faMicrosoft,
+    faAngular,
+    faAudible
+} from '@fortawesome/free-brands-svg-icons';
+import {
+    faPhone,
+    faEnvelope,
+    faDatabase,
+    faCode,
+    faBoxArchive,
+    faTree,
+    faDumbbell, faUserGroup
+} from '@fortawesome/free-solid-svg-icons';
+import {faLightbulb} from "@fortawesome/free-regular-svg-icons";
+
+function element(icon, text) {
+    return (
+        <div>
+            <FontAwesomeIcon icon={icon}/>
+            <div>{text}</div>
+        </div>
+    )
+}
+
+function sidebarList(title, items) {
+    const listItems = items.map((i) =>
+        element(i.icon, i.text)
+    );
+    return (
+        <div className="sidebar-list">
+            <h3>{title}</h3>
+            {listItems}
+        </div>
+    );
+}
 
 function Sidebar() {
+    const contactInfo = [
+        {icon: faEnvelope, text: "marco.steiner@windowslive.com"},
+        {icon: faGithub, text: "marcosteiner"},
+        {icon: faPhone, text: "+41 79 267 74 73"}
+    ];
+
+    const workedWith = [
+        {icon: faReact, text: "React"},
+        {icon: faJava, text: "Java"},
+        {icon: faPython, text: "Python"},
+        {icon: faDatabase, text: "SQL / PSQL"},
+        {icon: faLinux, text: "Linux"},
+    ];
+
+    const basicKnowledge = [
+        {icon: faCode, text: "C++"},
+        {icon: faMicrosoft, text: "C#"},
+        {icon: faAngular, text: "Angular"},
+        {icon: faCode, text: "Haskell"},
+        {icon: faBoxArchive, text: "Etc."}
+    ]
+
+
+    const interests = [
+        {icon: faAudible, text: "Audiobooks"},
+        {icon: faTree, text: "Sustainability"},
+        {icon: faLightbulb, text: "Innovation"},
+        {icon: faDumbbell, text: "Fitness"},
+        {icon: faUserGroup, text: "Socializing"}
+    ]
+
     return (
         <div className="sidebar">
-             <img src={photo}/>
+            <img src={photo} alt={"Marco Steiner"}/>
 
-            <h3>contact info</h3>
-            <table>
-                <tbody>
-                <tr>
-                    <td></td>
-                    <td>marco.steiner@windowslive.com</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>marcosteiner</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>+41 79 267 74 73</td>
-                </tr>
-                </tbody>
-            </table>
-
-            <h3>worked with</h3>
-            <table>
-                <tbody>
-                <tr>
-                    <td></td>
-                    <td>React</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Java</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Python</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>SQL / PSQL</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Linux</td>
-                </tr>
-                </tbody>
-            </table>
-
-            <h3>basic knowledge</h3>
-            <table>
-                <tbody>
-                <tr>
-                    <td></td>
-                    <td>C++</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>C#</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Angular</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Haskell</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Etc.</td>
-                </tr>
-                </tbody>
-            </table>
-
-            <h3>other interests</h3>
-            <table>
-                <tbody>
-                <tr>
-                    <td></td>
-                    <td>Audiobooks</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Sustainability</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Innovation</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Fitness</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Socializing</td>
-                </tr>
-                </tbody>
-            </table>
-
+            {sidebarList("Contact Info", contactInfo)}
+            {sidebarList("Worked With", workedWith)}
+            {sidebarList("Basic Knowledge", basicKnowledge)}
+            {sidebarList("Other Interests", interests)}
         </div>
     );
 }
