@@ -4,16 +4,6 @@ body {
     padding: 0;
 }
 
-.page {
-    width: 21cm;
-    min-height: 29.7cm;
-    padding: 0;
-    margin: 0;
-
-    display: flex;
-    flex-direction: row;
-}
-
 h1 {
     text-transform: uppercase;
     font-weight: normal;
@@ -43,6 +33,24 @@ h4 {
 p {
     padding: 0;
     margin: 0;
+}
+
+img {
+    border-radius: 50%;
+    width: 5cm;
+    height: 5cm;
+    display: block;
+    margin-bottom: 1cm;
+}
+
+.page {
+    width: 21cm;
+    min-height: 29.7cm;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: row;
 }
 
 .sidebar {
@@ -114,14 +122,6 @@ ul {
 
 .timeLine > div:first-child {
     font-weight: bold;
-}
-
-img {
-    border-radius: 50%;
-    width: 5cm;
-    height: 5cm;
-    display: block;
-    margin-bottom: 1cm;
 }
 
 .footer {
