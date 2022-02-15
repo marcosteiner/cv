@@ -1,5 +1,5 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import {faLocationDot} from '@fortawesome/free-solid-svg-icons';
 
 function Title() {
     return <div className="title">
@@ -15,13 +15,36 @@ function About() {
     </div>;
 }
 
-function ContentList(title , items) {
+function Footer(){
+    return(
+        <div className="footer">
+            <p>This resume was created with React. Check out the code at </p>
+            <a href="https://github.com/marcosteiner/cv">https://github.com/marcosteiner/cv</a>
+        </div>
+    )
+}
+
+function BulletPoints(items) {
+    const listItems = items.map((i) =>
+        <ul>
+            <li>{i}</li>
+        </ul>
+    );
+    return (
+        <div>
+            {listItems}
+        </div>
+    );
+}
+
+function ContentList(title, items) {
     const listItems = items.map((i) =>
         <div>
             <div>{i.time}</div>
             <div className="timeLine">
                 <div>{i.title}</div>
                 <div>{i.description}</div>
+                {i.bulletpoints && i.bulletpoints.length && BulletPoints(i.bulletpoints)}
             </div>
             <div>
                 <FontAwesomeIcon icon={faLocationDot}/>
@@ -39,19 +62,91 @@ function ContentList(title , items) {
 
 function Content() {
     const education = [
-        {time:"Now", title:"MSc BA New Business", description:"Chur", location: "Chur"},
-        {time:"Now", title:"MSc BA New Business", description:"Chur", location: "Chur"},
-        {time:"Now", title:"MSc BA New Business", description:"Chur", location: "Chur"},
-        {time:"Now", title:"MSc BA New Business", description:"Chur", location: "Chur"},
-    ]
+        {
+            time: "Now",
+            title: "MSc BA New Business",
+            description: "FHGR University of Applied Sciences of the Grisons",
+            location: "Chur"
+        },
+        {
+            time: "Sep 18",
+            title: "BSc in Computer Science",
+            description: "HSR University of Applied Sciences Rapperswil",
+            bulletpoints: ["Average: 4.8", "Thesis: 6.0"],
+            location: "Rapperswil"
+        },
+        {
+            time: "Aug 14",
+            title: "Informatiker Systemtechnik EFZ",
+            description: "Reichle & De Massari",
+            bulletpoints: ["Average: 4.7"],
+            location: "Wetzikon"
+        },
+    ];
+
+    const timeline = [
+        {
+            time: "Now",
+            title: "Student",
+            description: "FHGR University of Applied Sciences of the Grisons",
+            location: "Chur"
+        },
+        {
+            time: "Sep 21",
+            title: "Student",
+            description: "Vorbereitung Zulassungsprüfung für Master und WK",
+            location: "Uznach"
+        },
+        {time: "Mar 21", title: "Software Engineer", description: "Hostpoint AG", location: "Rapperswil"},
+        {
+            time: "Jun 19",
+            title: "Sabbatical",
+            description: "Working on myself, reading books and fixing stuff",
+            location: "Uznach"
+        },
+        {
+            time: "Sep 18",
+            title: "Student",
+            description: "HSR University of Applied Sciences Rapperswil",
+            location: "Rapperswil"
+        },
+        {time: "Aug 15", title: "Military Service", description: "Swiss Armed Forces", location: "Lyss"},
+        {time: "Feb 15", title: "ICT Technician", description: "Reichle & De Massari AG", location: "Wetzikon"},
+        {time: "Aug 14", title: "Apprentice", description: "Reichle & De Massari AG", location: "Wetzikon"},
+    ];
+
+    const projects = [
+        {
+            time: "2020",
+            title: "Sodiso",
+            description: "Socially distant socialising",
+            bulletpoints: ["Worked with friends on a small React app to connect people during the pandemic.", "Kind of like clubhouse before it became popular.", "Url: app.sodiso.ch"],
+            location: "Uznach"
+        },
+        {
+            time: "2018",
+            title: "Bachlor Thesis",
+            description: "HSR University of Applied Sciences Rapperswil",
+            bulletpoints: ["Wrote a VM to enable smart contract execution in the bazoblockchain.", "Learned a lot about VMs, blockchains, golang and Ethereum."],
+            location: "Rapperswil"
+        },
+        {
+            time: "2017",
+            title: "Study Project",
+            description: "HSR University of Applied Sciences Rapperswil",
+            bulletpoints: ["Worked on the front end of a customer service portal created with Angular."],
+            location: "Rapperswil"
+        }
+    ];
 
     return (
         <div className="content">
             {Title()}
             {About()}
             {ContentList("Education", education)}
-            {ContentList("Timeline", education)}
-            {ContentList("Projects", education)}
+            {ContentList("Timeline", timeline)}
+            {ContentList("Projects", projects)}
+            {Footer()}
         </div>
     );
 }

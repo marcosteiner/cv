@@ -1,41 +1,41 @@
+body {
+    font-family: "Roboto", helvetica, serif;
+    font-size: 12px;
+    padding: 0;
+}
+
 .page {
     width: 21cm;
     min-height: 29.7cm;
     padding: 0;
-    margin: 1cm auto;
-    border: 1px #D3D3D3 solid;
-    border-radius: 5px;
-    background: white;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin: 0;
 
     display: flex;
     flex-direction: row;
 }
 
 h1 {
-    ffont-family: "Roboto", helvetica, serif;
     text-transform: uppercase;
+    font-weight: normal;
     padding: 0;
     margin: 0;
 }
 
 h2 {
-    font-family: "Roboto", helvetica, serif;
     text-transform: uppercase;
     padding: 0;
     margin: 0 0 0.5cm;
 }
 
 h3 {
-    font-family: "Roboto", helvetica, serif;
     text-transform: uppercase;
     padding: 0;
     margin: 0.5cm 0 0.2cm;
 }
 
 h4 {
-    font-family: helvetica, serif;
     text-transform: uppercase;
+    font-weight: normal;
     padding: 0;
     margin: 0;
 }
@@ -46,16 +46,15 @@ p {
 }
 
 .sidebar {
-    width: 8cm;
+    width: 6cm;
     min-height: 29.7cm;
     padding: 1cm 0.5cm 1cm 1cm;
 
-    background-color: #6f6f6f;
+    background-color: #4f4d54;
     color: white;
-    font-family: "JetBrains Mono";
 }
 
-.sidebar-list div {
+.sidebar-list > div {
     display: flex;
     flex-direction: row;
     margin-top: 0.05cm;
@@ -63,11 +62,13 @@ p {
 
 .sidebar-list div svg {
     width: 0.5cm;
-    margin-right: 0.5cm;
+    margin-right: 0.2cm;
 }
 
 .content {
     margin-left: 0.5cm;
+    margin-right: 0.5cm;
+    margin-top: 1cm;
 }
 
 .content-list > div > div {
@@ -75,17 +76,26 @@ p {
     flex-direction: row;
 }
 
+.content-list > div > div > div:first-child {
+    width: 1.2cm;
+}
+
 .content-list svg {
     margin-right: 0.2cm;
 }
 
+ul {
+    padding: 0;
+    margin: 0 0 0 10px;
+}
+
 .timeLine {
     border-left: 1px solid lightgray;
-    padding-left: 0.5cm;
-    margin-left: 0.5cm;
-    margin-right: 0.5cm;
-    padding-bottom: 0.3cm;
-    width: 7cm;
+    padding-left: 0.2cm;
+    margin-left: 0.2cm;
+    margin-right: 0.2cm;
+    padding-bottom: 0.2cm;
+    width: 8.5cm;
 
     display: flex;
     flex-direction: column;
@@ -93,13 +103,13 @@ p {
 
 .timeLine::before {
     content: "";
-    width: 0.1cm;
-    height: 0.1cm;
+    width: 0.05cm;
+    height: 0.05cm;
     background-color: gray;
     border-radius: 999px;
     border: 3px solid gray;
     position: absolute;
-    left: 15.05cm;
+    left: 8.95cm;
 }
 
 .timeLine > div:first-child {
@@ -111,4 +121,10 @@ img {
     width: 5cm;
     height: 5cm;
     display: block;
+    margin-bottom: 1cm;
+}
+
+.footer {
+    padding-top: 0.5cm;
+    font-size: 8px;
 }
