@@ -75,7 +75,7 @@ function Content() {
         {
             time: "Now",
             title: "Working Student",
-            description: "60% part time software engineer at Healthinal GmbH and student at FHGR University of Applied Sciences of the Grisons",
+            description: "60% part time software engineer at Healthinal GmbH and student at FHGR",
             location: "Rapperswil / Chur"
         },
         {
