@@ -56,13 +56,6 @@ function ContentList(title, items) {
 function Content() {
     const education = [
         {
-            time: "Now",
-            title: "MSc BA New Business",
-            description: "FHGR University of Applied Sciences of the Grisons",
-            bulletpoints: ["Current average: 5.0"],
-            location: "Chur"
-        },
-        {
             time: "Sep 18",
             title: "BSc in Computer Science",
             description: "HSR University of Applied Sciences Rapperswil",
@@ -81,21 +74,27 @@ function Content() {
     const timeline = [
         {
             time: "Now",
+            title: "Working Student",
+            description: "60% part time software engineer at Healthinal GmbH and student at FHGR University of Applied Sciences of the Grisons",
+            location: "Rapperswil / Chur"
+        },
+        {
+            time: "May 22",
             title: "Student",
-            description: "FHGR University of Applied Sciences of the Grisons",
+            description: "MSc BA New Business at FHGR University of Applied Sciences of the Grisons",
             location: "Chur"
         },
         {
             time: "Sep 21",
             title: "Student",
-            description: "Preparation for admission examination to the master and military repetition course.",
+            description: "Preparation for admission examination to the Master of Busness Administration and military repetition course.",
             location: "Uznach"
         },
         {time: "Mar 21", title: "Software Engineer", description: "Hostpoint AG", location: "Rapperswil"},
         {
             time: "Jun 19",
             title: "Sabbatical",
-            description: "Took a semester off to work on myself, read books, think and fix stuff. Then started applying for jobs.",
+            description: "Took a semester off to work on myself, read books, think and fix stuff also including military service. Then started applying for jobs.",
             location: "Uznach"
         },
         {
