@@ -94,7 +94,7 @@ function Content() {
         {
             time: "Jun 19",
             title: "Sabbatical",
-            description: "Took a semester off to work on myself, read books, think and fix stuff also including military service. Then started applying for jobs.",
+            description: "Took a semester off to work on myself, read books, think and fix stuff (including military service). Then started applying for jobs.",
             location: "Uznach"
         },
         {
