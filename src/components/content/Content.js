@@ -8,17 +8,10 @@ function Title() {
     </div>;
 }
 
-function About() {
-    return <div className="about">
-        <h3>About</h3>
-        <p>Just a very curios engineer interested in finding out how the world works and wanting to be useful.</p>
-    </div>;
-}
-
-function Footer(){
-    return(
+function Footer() {
+    return (
         <div className="footer">
-            <p>This resume was created with React. Check out the code at </p>
+            <p>This resume was created with React. Check out the code at: </p>
             <a href="https://github.com/marcosteiner/cv">https://github.com/marcosteiner/cv</a>
         </div>
     )
@@ -66,6 +59,7 @@ function Content() {
             time: "Now",
             title: "MSc BA New Business",
             description: "FHGR University of Applied Sciences of the Grisons",
+            bulletpoints: ["Current average: 5.0"],
             location: "Chur"
         },
         {
@@ -78,7 +72,7 @@ function Content() {
         {
             time: "Aug 14",
             title: "Informatiker Systemtechnik EFZ",
-            description: "Reichle & De Massari",
+            description: "Reichle & De Massari AG",
             bulletpoints: ["Average: 4.7"],
             location: "Wetzikon"
         },
@@ -94,14 +88,14 @@ function Content() {
         {
             time: "Sep 21",
             title: "Student",
-            description: "Vorbereitung Zulassungsprüfung für Master und WK",
+            description: "Preparation for admission examination to the master and military repetition course.",
             location: "Uznach"
         },
         {time: "Mar 21", title: "Software Engineer", description: "Hostpoint AG", location: "Rapperswil"},
         {
             time: "Jun 19",
             title: "Sabbatical",
-            description: "Working on myself, reading books and fixing stuff",
+            description: "Took a semester off to work on myself, read books, think and fix stuff. Then started applying for jobs.",
             location: "Uznach"
         },
         {
@@ -120,14 +114,14 @@ function Content() {
             time: "2020",
             title: "Sodiso",
             description: "Socially distant socialising",
-            bulletpoints: ["Worked with friends on a small React app to connect people during the pandemic.", "Kind of like clubhouse before it became popular.", "Url: app.sodiso.ch"],
+            bulletpoints: ["Worked with friends on a small React app to connect people during the pandemic.", "Kind of like clubhouse before it became popular, just not as sophisticated.", "Url: app.sodiso.ch"],
             location: "Uznach"
         },
         {
             time: "2018",
             title: "Bachlor Thesis",
             description: "HSR University of Applied Sciences Rapperswil",
-            bulletpoints: ["Wrote a VM to enable smart contract execution in the bazoblockchain.", "Learned a lot about VMs, blockchains, golang and Ethereum."],
+            bulletpoints: ["Wrote a VM to enable smart contract execution in the Bazoblockchain.", "Learned a lot about VMs, blockchains, golang and Ethereum."],
             location: "Rapperswil"
         },
         {
@@ -142,7 +136,6 @@ function Content() {
     return (
         <div className="content">
             {Title()}
-            {About()}
             {ContentList("Education", education)}
             {ContentList("Timeline", timeline)}
             {ContentList("Projects", projects)}

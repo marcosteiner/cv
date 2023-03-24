@@ -117,7 +117,7 @@ ul {
     border-radius: 999px;
     border: 3px solid gray;
     position: absolute;
-    left: 8.95cm;
+    left: 9.32cm;
 }
 
 .timeLine > div:first-child {
@@ -125,6 +125,6 @@ ul {
 }
 
 .footer {
-    padding-top: 0.5cm;
+    padding-top: 1.5cm;
     font-size: 8px;
 }

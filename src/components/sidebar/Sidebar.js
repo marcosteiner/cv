@@ -80,7 +80,7 @@ function Sidebar() {
 
             {sidebarList("Contact Info", contactInfo)}
             {sidebarList("Worked With", workedWith)}
-            {sidebarList("Basic Knowledge", basicKnowledge)}
+            {sidebarList("other", basicKnowledge)}
             {sidebarList("Other Interests", interests)}
         </div>
     );
